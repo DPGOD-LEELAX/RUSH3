@@ -17,37 +17,36 @@
               <Label for="password">Password</Label>
               <Input type="password" v-model="password" id="password" placeholder="Enter Password" required />
             </div>
-            <div class="flex flex-col w-full space-y-2"> <!-- Change to flex-col for vertical stacking -->
+            <div class="flex flex-col w-full space-y-2"> <!-- Stack buttons vertically -->
               <Button
                 type="submit"
-                class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" <!-- Full width -->
-              
+                class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+              >
                 <i class="fas fa-sign-in-alt mr-2"></i> Login
               </Button>
               <Button
                 type="button"
                 @click="goToRegister"
-                class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" <!-- Full width -->
-              
+                class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+              >
                 <i class="fas fa-user-plus mr-2"></i> Create Account
               </Button>
             </div>
           </div>
         </form>
       </CardContent>
-      <CardFooter class="flex justify-center px-6 pb-6 w-full"> 
+      <CardFooter class="flex justify-center px-6 pb-6">
         <Button
           type="button"
           @click="goToTracker"
-          class="w-full bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition" <!-- Full width -->
-        
+          class="w-full bg-gray-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-gray-700 transition duration-300"
+        >
           <i class="fas fa-file-alt mr-2"></i> Document Tracker
         </Button>
       </CardFooter>
     </Card>
   </div>
 </template>
-
 
 <script setup>
 import {
@@ -102,3 +101,9 @@ definePageMeta({
   layout: false
 })
 </script>
+
+<style scoped>
+.container {
+  background-color: white; /* Fallback color if the image doesn't load */
+}
+</style>
